@@ -1,4 +1,4 @@
-.like-button-wrapper {
+/* .like-button-wrapper {
     &::before {
       content: "";
       z-index: 1;
@@ -29,4 +29,4 @@
         opacity: 1;
         transform: translateX(0);
       }
-    }
+    } */
