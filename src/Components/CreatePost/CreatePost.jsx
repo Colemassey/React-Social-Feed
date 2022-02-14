@@ -11,7 +11,8 @@ const CreatePost = (props) => {
         let newPost = {
             name: name,
             post: post
-        }
+        };
+        props.addNewPostProperty(newPost)
     }
 
     return ( 
