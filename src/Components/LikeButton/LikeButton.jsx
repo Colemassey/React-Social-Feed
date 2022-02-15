@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './LikeButton.css'
 
+// how do I make like button icons instead of buttons?
+
 const LikeButton = (props) => {
 
 

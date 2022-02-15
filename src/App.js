@@ -3,6 +3,8 @@ import DisplayPosts from "./Components/DisplayPosts/DisplayPosts";
 import CreatePost from "./Components/CreatePost/CreatePost";
 import './App.css'
 
+// Only other thing i'd really want to do to this is to make Like icons instead of the buttons. How do I do that?
+
 
 function App() {
   const [posts, setPosts] = useState([])
