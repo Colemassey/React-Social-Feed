@@ -1,11 +1,11 @@
 import LikeButton from '../LikeButton/LikeButton';
-import './LikeButton/LikeButton.jsx'
+import './DisplayPosts.css'
 
 
 const DisplayPosts = (props) => {
     return ( 
         <table>
-          {props.parentPosts.map((post) => {
+          {props.parentPosts.map((post, index) => {
             return (
                 <tbody className='border-box'>
                     <tr>
@@ -13,7 +13,7 @@ const DisplayPosts = (props) => {
                     </tr>
                     <tr>
                         <td>{post.post}</td>
-                        <td><LikeButton onLikeClick={props.onLikeClick} onDislikeClick={props.onDisLikeClick} /></td>
+                        <td><LikeButton onLikeClick={props.onLikeClick} onDislikeClick={props.onDislikeClick} index={index} post={post} /></td>
                     </tr>
                 </tbody>
             );
