@@ -7,13 +7,33 @@ import NavBar from "./Components/NavBar/NavBar";
 
 function App() {
 
-  const [posts, setPosts] = useState([{name: 'Cole', post: 'Hello World'}])
+  const [posts, setPosts] = useState([])
 
   function addNewPost(post){
     
     let tempPosts = [post, ...posts];
 
     setPosts(tempPosts)
+  }
+
+  function onLikeClick(index) {
+    let newTempPosts = [...posts];
+    if (newTempPosts[index].reaction === "none" || newTempPosts[index].reaction === 'disliked') {
+      newTempPosts[index].reaction = "liked";
+    } else {
+      newTempPosts[index].reaction = "none";
+    }
+    setPosts(newTempPosts)
+  }
+
+  function onDislikeClick(index) {
+    let newTempPosts = [...posts];
+    if (newTempPosts[index].reaction === "none" || newTempPosts[index].reaction === 'liked') {
+      newTempPosts[index].reaction = 'disliked';
+    } else {
+      newTempPosts[index].reaction = 'none';
+    }
+    setPosts(newTempPosts)
   }
 
   return (

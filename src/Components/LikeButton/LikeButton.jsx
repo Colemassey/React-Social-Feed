@@ -1,27 +1,13 @@
-// import React, { useState } from "react";
-// import cn from "classnames";
-// import { ReactComponent as Hand } from "./hand.svg";
+import React, { useState } from "react";
+import './LikeButton.css'
 
-// import "./LikeButton.scss";
+const LikeButton = (props) => {
 
-// const LikeButton = () => {
-//   const [liked, setLiked] = useState(null);
 
-//   return (
-//     <button
-//       onClick={() => setLiked(!liked)}
-//       onAnimationEnd={() => setClicked(false)}
-//       className={cn("like-button-wrapper", {
-//         liked,
-//       })}
-//     >
-//       <div className="like-button">
-//         <Hand />
-//         <span>Like</span>
-//         <span className={cn("suffix", { liked })}>d</span>
-//       </div>
-//     </button>
-//   );
-// };
-
-// export default LikeButton;
+    return ( <div>
+        <button type='button' className={`${props.post.reaction==='liked'?'liked':'none'} likeBtn`} onClick={()=>props.onLikeClick(props.index)}>Like</button>
+        <button type='button' className={`${props.post.reaction==='disliked'?'disliked':'none'} dislikeBtn`} onClick={()=>props.onDislikeClick(props.index)}>Dislike</button>
+    </div> );
+}
+ 
+export default LikeButton;
